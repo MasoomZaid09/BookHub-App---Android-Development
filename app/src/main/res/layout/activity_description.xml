@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DescriptionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/DescToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/orange"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <Button
+        android:id="@+id/btnAddFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_favorite"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        android:id="@+id/llContent">
+
+
+        <ImageView
+            android:id="@+id/imgDescBookImage"
+            android:layout_width="50dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1.5"
+            android:scaleType="centerCrop"
+            android:padding="5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/txtDescNames"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="3.3">
+
+            <TextView
+                android:id="@+id/txtDescBookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_of_the_book"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txtDescBookAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDescBookName"
+                android:layout_marginTop="10dp"
+                android:text="@string/name_of_the_author"
+                android:layout_marginStart="5dp"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/txtDescBookPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs_299"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtDescBookAuthor"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtDescBookRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2_3"
+            android:textSize="18sp"
+            android:drawablePadding="5dp"
+            app:drawableStartCompat="@drawable/ic_rating" />
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDescAboutBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_the_book"
+            android:textColor="@color/black"
+            android:layout_below="@id/llContent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+
+        <ScrollView
+            android:id="@+id/svContentBookLayout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/txtDescAboutBook">
+
+            <TextView
+                android:id="@+id/txtDescBookContent"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/book_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/DescProgressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <ProgressBar
+            android:id="@+id/DescProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="horizontal"
+    android:background="@color/orange"
+    >
+
+    <ImageView
+        android:id="@+id/imgHeaderIcon"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/book_app_icon_web"/>
+
+    <TextView
+        android:id="@+id/txtHeaderName"
+        android:text="@string/bookzone"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
